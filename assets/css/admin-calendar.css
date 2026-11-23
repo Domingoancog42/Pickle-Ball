@@ -1,0 +1,30 @@
+.admin-app .admin-calendar{min-width:0;padding:20px;--fc-small-font-size:11px}
+.admin-app .admin-calendar .fc{width:100%;min-width:0;color:var(--text)}
+.admin-app .admin-calendar .fc-toolbar{gap:14px;flex-wrap:wrap}
+.admin-app .admin-calendar .fc-daygrid-body,.admin-app .admin-calendar .fc-scrollgrid-sync-table{width:100%!important}
+.admin-app .admin-calendar .fc-scrollgrid{table-layout:fixed;width:100%}
+.admin-app .admin-calendar .fc-col-header{width:100%!important;table-layout:fixed}
+.admin-app .admin-calendar .fc-day-other .fc-daygrid-day-top{opacity:1}
+.admin-app .admin-calendar .fc-daygrid-day-frame{min-height:145px;min-width:0}
+.admin-app .admin-calendar .fc-daygrid-day-number{color:var(--text);font-size:13px;font-weight:600;padding:9px}
+.admin-app .admin-calendar .fc-day-other .fc-daygrid-day-number{opacity:.65}
+.admin-app .admin-calendar .fc-day-today .fc-daygrid-day-number{color:var(--teal);font-weight:750}
+.admin-app .admin-calendar .fc-col-header-cell-cushion{color:var(--text);padding:8px 3px;font-size:12px}
+.admin-app .admin-calendar .fc-daygrid-event{margin:3px 4px;border:0;border-radius:4px;padding:4px 5px;min-width:0;font-size:11px;line-height:1.4}
+.admin-app .admin-calendar .fc-daygrid-event .fc-event-main{overflow:hidden;color:inherit}
+.admin-app .admin-calendar .fc-event-title{overflow:hidden;text-overflow:ellipsis;font-weight:550}
+.admin-app .admin-calendar .fc-event-time{font-weight:700;flex-shrink:0}
+.admin-app .admin-calendar .fc-daygrid-more-link{display:block;float:none;margin:5px 4px 7px;padding:5px 6px;border-radius:4px;text-align:center;background:#18b7ae20;color:#83e5dc;font-size:11px;font-weight:650;white-space:normal;cursor:pointer}
+.admin-app .admin-calendar .fc-daygrid-more-link:hover{background:#18b7ae35;text-decoration:underline}
+.admin-app .calendar-guide{flex-wrap:wrap;line-height:1.6}
+.admin-app .calendar-day-list{display:grid;margin-top:18px;max-height:60vh;overflow-y:auto;overscroll-behavior:contain;padding-right:6px}
+.admin-app .calendar-day-booking{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.admin-app .calendar-customer-color{width:12px;height:36px;border-radius:4px;flex-shrink:0}
+.admin-app .calendar-day-booking>div{flex:1;min-width:0}
+.admin-app .calendar-day-booking h3{font-size:14px;overflow-wrap:anywhere}
+.admin-app .calendar-day-booking p{font-size:12px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}
+.admin-app .calendar-day-booking small{font-size:11px;color:var(--muted)}
+html[data-admin-theme=light] .admin-app .admin-calendar .fc-daygrid-more-link{background:#e0f1f2;color:#07636d}
+html[data-admin-theme=light] .admin-app .admin-calendar .fc-list-day-cushion{background:#eef4f5;color:var(--text)}
+html[data-admin-theme=light] .admin-app .admin-calendar .fc-list-event:hover td{background:#edf6f6}
+@media(max-width:767px){.admin-app .admin-calendar{padding:12px 6px}.admin-app .admin-calendar .fc-toolbar-title{font-size:18px}.admin-app .admin-calendar .fc-toolbar-chunk:last-child{width:100%}.admin-app .admin-calendar .fc-col-header-cell-cushion{font-size:10px}.admin-app .admin-calendar .fc-daygrid-day-frame{min-height:112px}.admin-app .admin-calendar .fc-daygrid-day-number{padding:6px;font-size:12px}.admin-app .admin-calendar .fc-daygrid-event{margin:2px 1px;padding:3px 2px;font-size:9px}.admin-app .admin-calendar .fc-daygrid-event .fc-event-time{display:none}.admin-app .admin-calendar .fc-daygrid-more-link{font-size:9px;margin:4px 1px;padding:5px 1px}.admin-app .calendar-day-booking{flex-wrap:wrap;gap:9px}.admin-app .calendar-day-booking>.secondary-button{margin-left:21px}.admin-app .calendar-day-list{max-height:65vh}}

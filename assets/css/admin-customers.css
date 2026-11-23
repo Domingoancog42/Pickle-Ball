@@ -1,0 +1,92 @@
+/* Customer profiles use the shared admin palette and reservation controls. */
+.admin-app .admin-dialog.customer-detail-dialog{width:960px;max-height:calc(100dvh - 60px);display:flex;flex-direction:column;color:var(--text)}
+.customer-detail-dialog>.dialog-header{padding:18px 28px;flex-shrink:0}
+.customer-detail-dialog>.dialog-header h2{font-size:17px;font-weight:600}
+.customer-detail-dialog>.dialog-header .icon-button{width:40px;height:40px;min-width:40px}
+.customer-detail-dialog .customer-detail-body{padding:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--muted) transparent}
+.customer-profile{padding:28px 28px 0}
+.customer-profile-heading{display:flex;align-items:center;gap:18px}
+.customer-detail-dialog .customer-avatar-large{width:68px;height:68px;font-size:26px;border-radius:16px}
+.customer-profile-copy{flex:1;min-width:0}
+.customer-profile-name{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.customer-profile-name h3{font-size:24px;font-weight:650;line-height:1.3;letter-spacing:-.025em;overflow-wrap:anywhere}
+.customer-profile-name .status-badge{font-size:11px;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.customer-profile-copy p{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;margin-top:8px;color:var(--muted);font-size:12px;line-height:1.6}
+.customer-contact-details{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:20px;margin:24px 0 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.customer-contact-details>div{min-width:0}
+.customer-contact-details dt{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;line-height:1.5}
+.customer-contact-details dt svg{width:14px;height:14px;flex-shrink:0}
+.customer-contact-details dd{margin:7px 0 0;font-size:13px;line-height:1.6;font-weight:500;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.customer-history{padding:26px 28px 24px}
+.customer-history-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.customer-history-heading h3{font-size:16px;font-weight:600;line-height:1.5}
+.customer-history-heading p{font-size:12px;color:var(--muted);line-height:1.6;margin-top:4px}
+.customer-history-count{font-size:11px;color:var(--muted);white-space:nowrap}
+.customer-history .local-table-filters{margin:0 0 14px;padding:0}
+.customer-history .local-table-filters input[type=search]{width:100%;max-width:320px;min-height:40px;font-size:12px}
+.customer-history .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;scrollbar-width:thin;scrollbar-color:var(--muted) transparent}
+.admin-app .customer-history .admin-table{min-width:0;width:100%;font-size:12px}
+.admin-app .customer-history .admin-table th{padding:12px;font-size:11px;letter-spacing:0;text-transform:none;white-space:nowrap}
+.admin-app .customer-history .admin-table td{padding:14px 12px;vertical-align:middle;white-space:normal}
+.customer-history .admin-table td:first-child{min-width:170px}
+.customer-history .admin-table td:nth-child(2){max-width:160px;overflow-wrap:anywhere}
+.customer-history .admin-table :is(td:nth-child(3),td:nth-child(4),td:nth-child(5)){white-space:nowrap;font-variant-numeric:tabular-nums}
+.customer-history .admin-table td:last-child{width:56px;text-align:right}
+.customer-history .admin-table th:last-child{text-align:right}
+.customer-history .admin-table tbody tr:last-child td{border-bottom:0}
+.customer-history .reference{background:transparent;border:0;padding:0;font-size:12px;font-weight:600;line-height:1.6;text-align:left}
+.customer-booking-date,.customer-booking-time{display:block;color:var(--muted);font-size:11px;line-height:1.6;font-variant-numeric:tabular-nums}
+.customer-booking-date{margin-top:5px}
+.customer-history .table-actions{justify-content:flex-end}
+.customer-history .table-pagination{padding:16px 0 0;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:11px}
+.customer-history .table-page-summary{gap:12px;font-size:11px}
+.customer-history .table-pagination .button-row{gap:8px;align-items:center}
+.customer-history .table-pagination button{min-height:36px;padding:6px 10px;font-size:11px}
+.customer-history .table-pagination select{min-height:36px;font-size:11px}
+.customer-history .table-no-results,.customer-history-note{font-size:12px;line-height:1.7;color:var(--muted);margin-top:14px}
+.customer-history .empty-state{padding:32px 20px 20px}
+.customer-history .empty-state h3{font-size:15px}
+.customer-history .empty-state p{color:var(--muted)}
+.customer-detail-dialog .customer-detail-footer{padding:16px 28px;flex-shrink:0}
+.customer-detail-footer .secondary-button{min-height:40px;min-width:88px;font-size:12px}
+.customer-detail-dialog :is(button,input,select):focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media(max-width:767px){
+  .admin-app .admin-dialog.customer-detail-dialog{max-height:calc(100dvh - 24px)}
+  .customer-detail-dialog>.dialog-header{padding:12px 20px}
+  .customer-profile{padding:24px 20px 0}
+  .customer-profile-name h3{font-size:21px}
+  .customer-contact-details{gap:20px 16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .customer-contact-details>div:first-child{grid-column:1/-1}
+  .customer-history{padding:24px 20px}
+  .customer-history-heading{align-items:flex-start;flex-wrap:wrap;gap:8px}
+  .customer-history-heading p{max-width:30ch}
+  .customer-history .table-pagination .button-row{width:auto}
+  .customer-detail-dialog .customer-detail-footer{padding:14px 20px}
+}
+@media(max-width:639px){
+  .customer-profile-heading{align-items:flex-start;gap:14px}
+  .customer-detail-dialog .customer-avatar-large{width:52px;height:52px;font-size:22px;border-radius:12px}
+  .customer-profile-name{gap:8px}
+  .customer-profile-name h3{font-size:20px;width:100%}
+  .customer-profile-copy p{font-size:11px;gap:2px 6px}
+  .customer-contact-details{margin-top:22px;padding:20px 0}
+  .customer-history-heading{margin-bottom:16px}
+  .customer-history .local-table-filters input[type=search]{max-width:none;min-width:0}
+  .customer-history .table-scroll{border:0;border-radius:0;overflow:visible}
+  .customer-history .admin-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .admin-app .customer-history .admin-table :is(tbody,tr){display:block}
+  .admin-app .customer-history .admin-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:12px 8px;padding:18px 0;border-top:1px solid var(--line);background:transparent}
+  .admin-app .customer-history .admin-table td{display:block;height:auto;min-width:0;max-width:none;padding:0;border:0;white-space:normal}
+  .customer-history .admin-table td:first-child{grid-column:1/3;grid-row:1}
+  .customer-history .admin-table td:nth-child(2){grid-column:1/3;grid-row:2}
+  .customer-history .admin-table td:nth-child(3){grid-column:3;grid-row:2;text-align:right;font-weight:600}
+  .customer-history .admin-table td:nth-child(4){grid-column:1;grid-row:3}
+  .customer-history .admin-table td:nth-child(5){grid-column:2/4;grid-row:3}
+  .customer-history .admin-table td:last-child{grid-column:3;grid-row:1;width:auto}
+  .customer-history .admin-table td:is(:nth-child(4),:nth-child(5))::before{content:attr(data-label);display:block;font-size:10px;color:var(--muted);margin-bottom:6px}
+  .admin-app .customer-history .admin-table .record-action-trigger{min-width:40px;width:40px;height:40px}
+  .customer-history .table-pagination{border-top:1px solid var(--line)}
+  .customer-history .table-page-summary{width:100%;justify-content:space-between;flex-wrap:wrap}
+  .customer-history .table-pagination .button-row{width:100%;justify-content:space-between}
+  .customer-history .table-pagination button{min-height:40px}
+}

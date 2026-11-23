@@ -1,0 +1,86 @@
+[
+    {
+        "name":  "chart.js",
+        "version":  "4.6.1",
+        "file":  "dist/chart.umd.js",
+        "out":  "chart.umd.js",
+        "source":  "https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.js"
+    },
+    {
+        "name":  "gsap",
+        "version":  "3.15.1",
+        "file":  "dist/gsap.min.js",
+        "out":  "gsap.min.js",
+        "source":  "https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"
+    },
+    {
+        "name":  "lucide",
+        "version":  "1.72.0",
+        "file":  "dist/umd/lucide.min.js",
+        "out":  "lucide.min.js",
+        "source":  "https://cdn.jsdelivr.net/npm/lucide@1.72.0/dist/umd/lucide.min.js"
+    },
+    {
+        "name":  "fullcalendar",
+        "version":  "6.1.20",
+        "file":  "index.global.min.js",
+        "out":  "fullcalendar.min.js",
+        "source":  "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"
+    },
+    {
+        "name":  "@fontsource-variable/inter",
+        "version":  "5.3.0",
+        "file":  "files/inter-latin-wght-normal.woff2",
+        "out":  "inter-latin-variable.woff2",
+        "source":  "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/files/inter-latin-wght-normal.woff2"
+    },
+    {
+        "name":  "luxon",
+        "version":  "3.7.2",
+        "file":  "build/global/luxon.min.js",
+        "out":  "luxon.min.js"
+    },
+    {
+        "name":  "@fullcalendar/luxon3",
+        "version":  "6.1.20",
+        "file":  "index.global.min.js",
+        "out":  "fullcalendar-luxon3.min.js"
+    },
+    {
+        "name":  "gsap/ScrollTrigger",
+        "version":  "3.15.1",
+        "file":  "ScrollTrigger.min.js",
+        "license":  "gsap.min.js.LICENSE.txt",
+        "source":  "https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"
+    },
+    {
+        "name":  "sweetalert2",
+        "version":  "11.26.25",
+        "file":  "sweetalert2.all.min.js",
+        "license":  "sweetalert2.LICENSE.txt",
+        "source":  "https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js"
+    },
+    {
+        "name":  "jspdf",
+        "version":  "4.2.1",
+        "file":  "dist/jspdf.umd.min.js",
+        "out":  "jspdf.umd.min.js",
+        "license":  "jspdf.LICENSE.txt",
+        "source":  "https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js"
+    },
+    {
+        "name":  "jspdf-autotable",
+        "version":  "5.0.9",
+        "file":  "dist/jspdf.plugin.autotable.min.js",
+        "out":  "jspdf.plugin.autotable.min.js",
+        "license":  "jspdf-autotable.LICENSE.txt",
+        "source":  "https://cdn.jsdelivr.net/npm/jspdf-autotable@5.0.9/dist/jspdf.plugin.autotable.min.js"
+    },
+    {
+        "name":  "Noto Sans",
+        "version":  "28b15b4b43b7bed62b5cf6e6b0b5ff5846270535",
+        "file":  "noto-sans-regular.ttf, noto-sans-bold.ttf",
+        "license":  "noto-sans.LICENSE.txt",
+        "source":  "https://github.com/notofonts/notofonts.github.io/tree/28b15b4b43b7bed62b5cf6e6b0b5ff5846270535/fonts/NotoSans/hinted/ttf"
+    }
+]

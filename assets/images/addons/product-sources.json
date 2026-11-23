@@ -1,0 +1,154 @@
+[
+  {
+    "key": "c2",
+    "file": "assets/images/addons/c2.jpg",
+    "title": "C2 Green Tea Apple 455ml",
+    "source": "https://shopsuki.ph/products/c2-green-tea-apple-455ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102064816.jpg?v=1768978845",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "coca-cola",
+    "file": "assets/images/addons/coca-cola.jpg",
+    "title": "Coke In Can 320ml",
+    "source": "https://shopsuki.ph/products/coke-in-can-320ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4801981110001_812a8b22-317d-4e77-8f01-787e0b75e085.jpg?v=1709171786",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "sprite",
+    "file": "assets/images/addons/sprite.jpg",
+    "title": "Sprite In Can 320ml",
+    "source": "https://shopsuki.ph/products/sprite-in-can-320ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4801981110209.jpg?v=1709258882",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "royal",
+    "file": "assets/images/addons/royal.jpg",
+    "title": "Royal Tru-Orange In Can 325ml",
+    "source": "https://shopsuki.ph/products/royal-tru-orange-in-can-325ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4801981110100.jpg?v=1709257301",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "pepsi",
+    "file": "assets/images/addons/pepsi.jpg",
+    "title": "Pepsi Regular In Can 330ml",
+    "source": "https://shopsuki.ph/products/pepsi-regular-in-can-330ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4803925033100_7070f93e-9340-49c1-885b-507f787d885e.jpg?v=1793788245",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "gatorade",
+    "file": "assets/images/addons/gatorade.jpg",
+    "title": "Gatorade Energy Drink Blue Bolt 500ml",
+    "source": "https://shopsuki.ph/products/gatorade-energy-drink-blue-bolt-500ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4803925061141_b2360627-c79f-4095-815e-4ef850d4c9f3.jpg?v=1733895883",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "pocari-sweat",
+    "file": "assets/images/addons/pocari-sweat.jpg",
+    "title": "Pocari Sweat Ion Drink 500ml",
+    "source": "https://shopsuki.ph/products/pocari-sweat-ion-drink-500ml",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/104118377.jpg?v=1789958061",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "piattos",
+    "file": "assets/images/addons/piattos.jpg",
+    "title": "Jack 'n Jill Piattos Potato Crisps Cheese 40g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-piattos-potato-crisps-cheese-40g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102055444_3f35aa73-d4cd-4565-b26f-a5704e17e6cc.jpg?v=1739436722",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "nova",
+    "file": "assets/images/addons/nova.jpg",
+    "title": "Jack 'n Jill Nova Country Cheddar 38g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-nova-country-cheddar-40g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102064889.jpg?v=1756178180",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "v-cut",
+    "file": "assets/images/addons/v-cut.png",
+    "title": "Jack 'n Jill V-Cut Potato Chips Spicy Barbecue 60g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-v-cut-potato-chips-spicy-barbecue-60g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102064902.png?v=1713329422",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "chippy",
+    "file": "assets/images/addons/chippy.png",
+    "title": "Jack 'n Jill Chippy Corn Chips Barbecue 25g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-chippy-corn-chips-barbecue-25g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102064818.png?v=1685351781",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "clover-chips",
+    "file": "assets/images/addons/clover-chips.png",
+    "title": "Clover Chips Corn Snacks Chili And Cheese 24g",
+    "source": "https://shopsuki.ph/products/clover-chips-corn-snacks-chili-and-cheese-24g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/102056244.png?v=1695629842",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "oishi-prawn-crackers",
+    "file": "assets/images/addons/oishi-prawn-crackers.jpg",
+    "title": "Oishi Prawn Crackers Original 60g",
+    "source": "https://shopsuki.ph/products/oishi-prawn-crackers-original-60g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4891208040136.jpg?v=1753152417",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "mang-juan",
+    "file": "assets/images/addons/mang-juan.jpg",
+    "title": "Jack 'n Jill Chicharron Ni Mang Juan Sukang Paombong 26g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-chicharron-ni-mang-juan-sukang-paombong-26g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4800016110535.jpg?v=1752662984",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "martys-cracklin",
+    "file": "assets/images/addons/martys-cracklin.jpg",
+    "title": "Oishi Marty's Cracklin' Salt And Vinegar 26g",
+    "source": "https://shopsuki.ph/products/oishi-martys-cracklin-salt-and-vinegar-26g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4800194152907.jpg?v=1780659640",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "boy-bawang",
+    "file": "assets/images/addons/boy-bawang.png",
+    "title": "Boy Bawang Chichacorn Garlic 100g",
+    "source": "https://shopsuki.ph/products/boy-bawang-chichacorn-garlic-100g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/products/Untitleddesign_56_aed5f8c0-8d42-41b8-a322-da137e4f6721.png?v=1713234437",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "ding-dong",
+    "file": "assets/images/addons/ding-dong.png",
+    "title": "Dingdong Mixed Nuts Plain 100g",
+    "source": "https://shopsuki.ph/products/dingdong-mixed-nuts-plain-100g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/products/Untitleddesign_38_c07edc11-0f25-406b-a307-d76540b63b14.png?v=1748834714",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "nagaraya",
+    "file": "assets/images/addons/nagaraya.jpg",
+    "title": "Nagaraya Cracker Nuts Original 80g",
+    "source": "https://shopsuki.ph/products/nagaraya-cracker-nuts-original-80g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/products/731126101080.jpg?v=1680138181",
+    "retrieved": "2026-11-21"
+  },
+  {
+    "key": "chiz-curls",
+    "file": "assets/images/addons/chiz-curls.jpg",
+    "title": "Jack 'n Jill Chiz Curls Cheese 55g",
+    "source": "https://shopsuki.ph/products/jack-n-jill-chiz-curls-cheese-55g",
+    "image": "https://cdn.shopify.com/s/files/1/0358/1335/9748/files/4800016105098.jpg?v=1752813364",
+    "retrieved": "2026-11-21"
+  }
+]

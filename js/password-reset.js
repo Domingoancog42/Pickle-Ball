@@ -1,0 +1,39 @@
+(() => {
+  const states=new WeakMap(),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const eye=id=>`<button type="button" class="auth-password-toggle" data-reset-toggle="${id}" aria-controls="${id}" aria-label="Show password" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path data-eye-slash hidden d="M3 3l18 18"/></svg></button>`;
+  const error=(form,message)=>{const box=form.querySelector('.form-error');box.textContent=message;box.hidden=!message;};
+  const cooldown=(form,state)=>{const button=form.querySelector('[data-reset-resend]');if(button){const seconds=Math.max(0,Math.ceil((state.resendAt-Date.now())/1000));button.disabled=seconds>0||state.busy;button.textContent=seconds?'Resend code in '+seconds+'s':'Resend code';}};
+  const render=form=>{
+    if(!form.isConnected)return;const s=states.get(form),dialog=form.closest('.reset-dialog');error(form,'');
+    dialog.querySelectorAll('[data-reset-step]').forEach(item=>{const n=Number(item.dataset.resetStep);item.classList.toggle('complete',n<s.step);item.classList.toggle('current',n===s.step);if(n===s.step)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');});
+    dialog.querySelector('#forgot-title').textContent=s.step===2?'Check your inbox':s.step===3?'Choose a new password':'Forgot your password?';
+    dialog.querySelector('#reset-description').textContent=s.step===2?'Enter the 6-digit code sent to your email. It expires in 10 minutes.':s.step===3?'Your email is verified. Choose a strong password.':'A few quick steps to get you back on court.';
+    const fields=form.querySelector('#reset-fields'),secondary=form.querySelector('#reset-secondary');
+    if(s.step===2){fields.innerHTML=`<p class="reset-email-summary">${escape(s.email)}</p><p class="auth-temp-note">If this email has an active account, we have sent a code. Check your spam folder too.</p><div class="auth-field"><label for="reset-code">Verification code</label><div class="auth-control"><input id="reset-code" name="code" class="reset-code-input" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" placeholder="000000" required></div></div>`;secondary.innerHTML='<div class="reset-secondary"><button type="button" class="auth-link" data-reset-resend>Resend code</button><button type="button" class="auth-link" data-reset-edit>Change email</button></div>';form.querySelector('[type=submit]').textContent='Verify code';cooldown(form,s);}
+    if(s.step===3){fields.innerHTML=`<div class="auth-field"><label for="reset-new-password">New password</label><div class="auth-control auth-password"><input id="reset-new-password" name="new_password" type="password" autocomplete="new-password" minlength="${s.policy.minimum}" maxlength="${s.policy.maximum}" placeholder="Enter New password" aria-describedby="reset-password-rules" required>${eye('reset-new-password')}</div></div><section class="password-checklist" id="reset-password-rules" hidden><h2>Create a password that:</h2><ul>${Object.entries(s.policy.labels).map(([rule,label])=>`<li data-rule="${rule}"><span class="password-rule-icon" aria-hidden="true"></span><span>${escape(label)}</span></li>`).join('')}</ul><p class="password-progress" aria-live="polite"></p></section><div class="auth-field"><label for="reset-confirm-password">Confirm new password</label><div class="auth-control auth-password"><input id="reset-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="${s.policy.minimum}" maxlength="${s.policy.maximum}" placeholder="Enter Confirm New Password" required>${eye('reset-confirm-password')}</div></div>`;secondary.innerHTML='';form.querySelector('[type=submit]').textContent='Save password & return to login';}
+    fields.querySelector('input')?.focus({preventScroll:true});
+  };
+  const validate=form=>{
+    const s=states.get(form),input=form.querySelector('[name=new_password]');if(!input)return true;
+    const value=input.value,lower=value.toLowerCase(),email=s.email.toLowerCase(),username=email.split('@')[0];
+    const rules={length:Array.from(value).length>=s.policy.minimum&&Array.from(value).length<=s.policy.maximum&&!value.includes(String.fromCharCode(0)),common:!s.policy.common.includes(lower)};
+    const checklist=form.querySelector('.password-checklist');checklist.hidden=!value;Object.entries(rules).forEach(([key,valid])=>checklist.querySelector('[data-rule='+key+']').classList.toggle('is-valid',valid));const count=Object.values(rules).filter(Boolean).length;checklist.querySelector('.password-progress').textContent=count===2?'All requirements met.':count+' of 2 requirements met.';const failed=Object.keys(rules).find(key=>!rules[key]);input.setCustomValidity(value&&failed?s.policy.labels[failed]+'.':'');return !failed;
+  };
+  window.PikolReset={mount(form,options){
+    const state={...options,step:1,email:'',resendAt:0,busy:false};states.set(form,state);form.closest('.reset-dialog').querySelector('[data-reset-step="1"]').classList.add('current');
+    const timer=setInterval(()=>{if(!form.isConnected){clearInterval(timer);return;}cooldown(form,state);},1000);
+    form.addEventListener('input',()=>{if(state.step===3)validate(form);});
+    form.addEventListener('click',async event=>{
+      const toggle=event.target.closest('[data-reset-toggle]');if(toggle){const input=form.querySelector('#'+toggle.dataset.resetToggle),visible=input.type==='password';input.type=visible?'text':'password';toggle.setAttribute('aria-pressed',String(visible));toggle.setAttribute('aria-label',visible?'Hide password':'Show password');toggle.querySelector('[data-eye-slash]').hidden=!visible;return;}
+      if(event.target.closest('[data-reset-edit]')){state.step=1;state.busy=false;const template=document.querySelector('#template-forgot').content;form.querySelector('#reset-fields').innerHTML=template.querySelector('#reset-fields').innerHTML;form.querySelector('#forgot-email').value=state.email;form.querySelector('#reset-secondary').innerHTML='';form.querySelector('[type=submit]').textContent='Send reset code';render(form);return;}
+      if(event.target.closest('[data-reset-resend]')&&!state.busy&&Date.now()>=state.resendAt){state.busy=true;cooldown(form,state);try{await state.request('request',{email:state.email});state.resendAt=Date.now()+60000;error(form,'');const code=form.querySelector('[name=code]');if(code){code.value='';code.focus();}const note=form.querySelector('[data-reset-notice]')||document.createElement('p');note.dataset.resetNotice='true';note.className='reset-resend-notice';note.setAttribute('role','status');note.textContent='A new code was requested. Check your inbox; the previous code no longer works.';form.querySelector('#reset-secondary').append(note);}catch(e){error(form,e.message);}finally{state.busy=false;cooldown(form,state);}}
+    });
+  },async submit(form){
+    const s=states.get(form);if(!s||s.busy)return;s.busy=true;error(form,'');
+    try{
+      if(s.step===1){s.email=form.querySelector('[name=email]').value.trim();await s.request('request',{email:s.email});s.step=2;s.resendAt=Date.now()+60000;render(form);}
+      else if(s.step===2){const result=await s.request('verify',{code:form.querySelector('[name=code]').value.trim()});s.policy=result.policy;s.step=3;render(form);}
+      else{if(!validate(form)){form.reportValidity();return;}const data=new FormData(form);if(data.get('new_password')!==data.get('confirm_password'))throw Error('The passwords must match.');await s.request('reset',{new_password:data.get('new_password'),confirm_password:data.get('confirm_password')});s.done(s.email);}
+    }catch(e){error(form,e.message);}finally{s.busy=false;cooldown(form,s);}
+  }};
+})();

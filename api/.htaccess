@@ -1,0 +1,3 @@
+<Files "connection-pdo.php">
+Require all denied
+</Files>

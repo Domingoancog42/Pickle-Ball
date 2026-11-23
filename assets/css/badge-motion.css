@@ -1,0 +1,41 @@
+/* Count badges pulse without changing layout or flashing. */
+.home-bell-count:not([hidden]),
+.notification-button > #notification-count:not([hidden]),
+#sidebar .nav-count:not([hidden]) {
+  animation: count-badge-pulse 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+#sidebar .nav-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+#sidebar .nav-count[hidden] { display: none !important; }
+@media (min-width: 768px) {
+  .sidebar-collapsed #sidebar .nav-link { position: relative; }
+  .sidebar-collapsed #sidebar .nav-count {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    font-size: 9px;
+  }
+}
+@keyframes count-badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-bell-count,
+  .notification-button > #notification-count,
+  #sidebar .nav-count { animation: none !important; transform: none; }
+}

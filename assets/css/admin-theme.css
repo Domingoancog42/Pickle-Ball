@@ -1,0 +1,54 @@
+.admin-theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:5px 8px;border:0;border-radius:8px;background:transparent;color:var(--muted)}
+.admin-theme-toggle>svg{width:15px;height:15px}.admin-theme-track{width:30px;height:18px;border-radius:20px;background:#087f8c;padding:3px;display:block}.admin-theme-track:after{content:'';display:block;width:12px;height:12px;border-radius:50%;background:#fff;transform:translateX(12px);transition:transform .18s ease}.admin-theme-toggle[aria-checked=false] .admin-theme-track{background:#81969f}.admin-theme-toggle[aria-checked=false] .admin-theme-track:after{transform:translateX(0)}
+html[data-admin-theme=light]{color-scheme:light;--admin-bg:#f3f6f7;--sidebar:#fff;--panel:#fff;--line:#d4dfe3;--muted:#52656f;--teal:#087f8c;--bluegreen:#087f8c;--text:#1d3039}
+html[data-admin-theme=light] .admin-app :is(.topbar,.dropdown,.admin-dialog,.record-action-menu,.settings-actions>div){background:#fff;border-color:var(--line);color:var(--text)}
+html[data-admin-theme=light] .admin-app :is(.nav-link,.breadcrumb strong,.dropdown>a,.dropdown>button,.club-status,.icon-button,.customer-cell,.admin-table td,.detail-grid dd,.policy-row label,.settings-filter-grid label){color:var(--text)!important}
+html[data-admin-theme=light] .admin-app :is(.nav-link:hover,.icon-button:hover,.dropdown>a:hover,.dropdown>button:hover,.quick-links button:hover,.record-action-menu .record-action-item:hover,.settings-actions>div>*:hover){background:#edf4f5;color:#076b76!important}
+html[data-admin-theme=light] .admin-app .nav-link.active{background:#e2f3f2;color:#076b76!important;border-color:#a7d8d5}
+html[data-admin-theme=light] .admin-app :is(.kpi-value,.status-legend strong,.court-content h2,.notification-item strong,.activity-item p){color:var(--text)}
+html[data-admin-theme=light] .admin-app :is(.kpi-top,.kpi-support,.status-legend>div,.cell-secondary,.customer-cell small,.court-description,.court-meta,.detail-grid dt,.activity-timeline small,.notification-item span,.notification-item small,.profile-copy small,.club-status small,.nav-caption,.breadcrumb>span,.admin-footer,.settings-footnote,.settings-audit-table small,.policy-row p,.settings-panel .panel-heading p,.backup-overview span,.backup-overview small,.settings-note){color:var(--muted)}
+html[data-admin-theme=light] .admin-app :is(input:not([type=checkbox]),select,textarea){background:#fff!important;color:var(--text)!important;border-color:#b6c8cf!important;caret-color:#087f8c}
+html[data-admin-theme=light] .admin-app input::placeholder,html[data-admin-theme=light] .admin-app textarea::placeholder{color:#617680;opacity:1}
+html[data-admin-theme=light] .admin-app :is(.secondary-button,.date-pill,.segmented,.quick-links button,.admin-table th,.settings-tabs,.settings-panel,.backup-overview>div,.settings-json,.record-action-trigger){background:#f5f8f9;border-color:var(--line);color:var(--text)}
+html[data-admin-theme=light] .admin-app :is(.settings-panel,.setting-form){background:#fff}
+html[data-admin-theme=light] .admin-app :is(.segmented button,.settings-tabs button,.record-action-menu .record-action-item){color:var(--muted)}
+html[data-admin-theme=light] .admin-app :is(.segmented button.active,.settings-tabs button.active){background:#087f8c;color:#fff}
+html[data-admin-theme=light] .admin-app :is(.secondary-button:hover,.settings-tabs button:hover){background:#e3eef0;color:#075e68}
+html[data-admin-theme=light] .admin-app :is(.primary-button,.skip-link){background:#087f8c;color:#fff!important;border-color:#087f8c}
+html[data-admin-theme=light] .admin-app .primary-button:hover{background:#076c77}
+html[data-admin-theme=light] .admin-app .admin-table tbody tr:hover{background:#f0f7f7}
+html[data-admin-theme=light] .admin-app :is(.avatar,.kpi-icon,.empty-icon){color:#076b76;background:#e5f3f2;border-color:#b9deda}
+html[data-admin-theme=light] .admin-app :is(.status-pending,.status-pending-verification,.settings-warning){color:#775016;background:#fff4d9;border-color:#e7d3a1}
+html[data-admin-theme=light] .admin-app :is(.status-confirmed,.status-completed,.status-paid,.trend-up){color:#176745;background:#e7f5ed}
+html[data-admin-theme=light] .admin-app :is(.status-cancelled,.status-refunded,.danger-button,.trend-down,.setting-error){color:#a32d43}
+html[data-admin-theme=light] .admin-app :is(.status-unpaid,.status-no-show){color:#52656f;background:#eaf0f3}
+html[data-admin-theme=light] .admin-app :is(.form-error,.admin-toast.error){color:#92273a;background:#fff0f2;border-color:#eac0c7}
+html[data-admin-theme=light] .admin-app .admin-toast{background:#e7f5f0;color:#185846;border-color:#9dcbbb}
+html[data-admin-theme=light] .admin-app .admin-calendar{--fc-border-color:#d4dfe3;--fc-page-bg-color:#fff;--fc-neutral-bg-color:#f3f6f7;--fc-button-bg-color:#087f8c;--fc-button-border-color:#087f8c;--fc-button-hover-bg-color:#076c77}
+html[data-admin-theme=light] .admin-app .admin-calendar .fc-col-header-cell{background:#eef4f5;color:#52656f}
+html[data-admin-theme=light] .admin-app :is(.policy-row,.settings-tabs,.settings-panel,.backup-overview>div,.settings-json,.admin-table td,.admin-table th){border-color:var(--line)}
+html[data-admin-theme=light] .workspace-confirmation .swal2-popup{background:#fff!important;color:#1d3039!important;border-color:#c2d3d9}
+html[data-admin-theme=light] .workspace-confirmation :is(.swal2-textarea,.swal2-input){background:#fff;color:#1d3039;border-color:#b6c8cf}
+html[data-admin-theme=light] .workspace-confirmation .swal2-validation-message{background:#fff0f2;color:#92273a}
+html[data-admin-theme=light] .admin-app .settings-panel .table-scroll{scrollbar-color:#8ea8af #eef4f5}
+html[data-admin-theme=light] .admin-app label{color:#364f5a}
+html[data-admin-theme=light] .admin-app .empty-state h3{color:var(--text)}
+html[data-admin-theme=light] .admin-app :is(.empty-state p,.helper-note,.helper-note p,.detail-grid small){color:var(--muted)}
+html[data-admin-theme=light] .admin-app .helper-note{background:#f1f8f8;border-color:#c5dfe1}
+html[data-admin-theme=light] .admin-app .brand img{background:#20262b;border-radius:8px;padding:3px}
+/* Dark-theme literals also occur in supporting text, references and status chips. */
+html[data-admin-theme=light] .admin-app :is(.reference,.court-meta svg,.text-button,.eyebrow){color:#076b76}
+html[data-admin-theme=light] .admin-app :is(.activity-item small,.empty-state,.pagination,.table-no-results,.settings-form-footer p,.settings-footnote,.settings-note,.settings-panel small,.admin-footer){color:#465e69}
+/* Keep the fallback less specific than each semantic status color. */
+html[data-admin-theme=light] .admin-app :where(.status-badge){color:#405965;background:#eaf0f3}
+html[data-admin-theme=light] .admin-app :is(.status-unpaid,.status-no-show){color:#405965;background:#eaf0f3}
+html[data-admin-theme=light] .admin-app :is(.status-active,.status-confirmed,.status-paid,.status-completed){color:#176745;background:#e7f5ed}
+html[data-admin-theme=light] .admin-app :is(.status-maintenance){color:#754181;background:#f3eaf7}
+html[data-admin-theme=light] .admin-app :is(.status-disabled,.status-cancelled,.status-refunded){color:#9b3043;background:#fff0f2}
+html[data-admin-theme=light] .admin-app .error-state{color:#9b3043}
+html[data-admin-theme=light] .admin-app .table-pagination .current-page{color:#075e68;background:#e0f1f2;border-color:#087f8c}
+html[data-admin-theme=light] .admin-app .record-action-menu :is([data-status=Cancelled],[data-status=disabled],[data-action=cancel-booking],[data-action=maintenance-delete],[data-action=payment-refund]){color:#9b3043}
+html[data-admin-theme=light] .admin-app :is(.notification-heading,.notification-heading strong,.detail-total,.settings-subtitle){color:var(--text)}
+.admin-app #sidebar .nav-count{background:#c62828;color:#fff;border:0;font-weight:700}
+@media(max-width:460px){.admin-theme-toggle{gap:4px;padding:5px}.admin-theme-toggle>svg{width:12px;height:12px}}
+@media(prefers-reduced-motion:reduce){.admin-theme-track:after{transition:none}}

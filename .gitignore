@@ -1,0 +1,19 @@
+# User uploads and private payment proofs are runtime data.
+/uploads/*/
+/storage/*/
+/config/mail.local.php
+/config/turnstile.local.php
+/config/database.local.php
+/config/hosting.local.php
+
+# Local environment and editor settings.
+.env
+.env.*
+!.env.example
+/.vscode/
+
+# Composer dependencies; keep the bundled browser animation library.
+/vendor/*
+!/vendor/.htaccess
+!/vendor/anime.LICENSE.md
+!/vendor/anime.umd.min.js

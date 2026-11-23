@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^7.2",
+        "khanamiryan/qrcode-detector-decoder": "^2.0.3",
+        "ext-gd": "*"
+    }
+}

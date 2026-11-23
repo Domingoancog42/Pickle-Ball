@@ -1,0 +1,55 @@
+/* Compact admin records, retaining the system palette in both themes. */
+.admin-app .customer-avatar{position:relative;flex-shrink:0}
+.admin-app .customer-avatar img{position:absolute;inset:0}
+.admin-app .customer-avatar-large{width:64px;height:64px;font-size:24px;border-radius:16px}
+.admin-app .status-inactive{background:#dc788412;color:#e9929d;border-color:#dc788425}
+html[data-admin-theme=light] .admin-app .status-inactive{color:#9b3043;background:#fff0f2;border-color:#eac0c7}
+.admin-app .status-badge::before{content:none;display:none}
+.admin-app .breadcrumb ol{list-style:none;display:flex;align-items:center;gap:10px;padding:0;margin:0;min-width:0}
+.admin-app .breadcrumb li{display:flex;align-items:center;min-width:0}
+.admin-app .breadcrumb a{color:var(--muted);text-decoration:none;white-space:nowrap}
+.admin-app .breadcrumb a:hover{color:var(--teal);text-decoration:underline;text-underline-offset:4px}
+.admin-app .breadcrumb [aria-current=page]{color:var(--text);font-weight:600}
+.admin-app .record-action-trigger>svg{width:15px;height:15px;stroke-width:1.8}
+@media(max-width:1020px){.admin-app .breadcrumb ol>li:first-child,.admin-app .breadcrumb ol>li:nth-child(2){display:none}}
+@media(max-width:460px){.admin-app .breadcrumb [aria-current=page]{max-width:35vw;overflow:hidden;text-overflow:ellipsis}}
+.admin-app .table-module{border-radius:12px;overflow:hidden}
+.admin-app .table-module-primary{border-top:2px solid var(--teal)}
+.admin-app .table-module>.page-heading{padding:18px 20px 16px;margin:0;border-bottom:1px solid var(--line);align-items:center}
+.admin-app .table-module>.page-heading .eyebrow{display:none}
+.admin-app .table-module>.page-heading h1{font-size:19px;letter-spacing:-.4px}
+.admin-app .table-module>.page-heading p{font-size:12px;margin-top:5px}
+.admin-app .table-module>.page-heading .heading-actions{width:auto}
+.admin-app .table-module :is(.primary-button,.secondary-button){min-height:32px;padding:7px 11px;font-size:11px}
+.admin-app .module-table-toolbar{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;padding:16px 20px}
+.admin-app .module-table-toolbar>form{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;flex:0 1 auto;margin:0;padding:0}
+.admin-app .module-table-toolbar label,.admin-app .table-module .local-table-filters label{display:flex;flex-direction:column;align-items:stretch;gap:6px;color:var(--muted);font-size:11px;font-weight:500}
+.admin-app .module-table-toolbar :is(input,select),.admin-app .table-module .local-table-filters :is(input,select){width:auto;min-width:115px;max-width:230px;min-height:34px!important;padding:7px 10px!important;font-size:12px}
+.admin-app .module-table-toolbar input[type=search]{width:220px}
+.admin-app .module-table-toolbar .module-rows-control select,.admin-app .table-module .local-table-filters .module-rows-control select{min-width:80px;width:80px}
+.admin-app .table-module .local-table-filters{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin:0;padding:16px 20px}
+.admin-app .table-module>.table-scroll{margin:0 14px;border:1px solid var(--line);border-radius:8px;scrollbar-width:thin;scrollbar-color:#68858e transparent}
+.admin-app .admin-table{font-size:12px}
+.admin-app .admin-table th{font-size:10px;letter-spacing:.025em;text-transform:uppercase;padding:11px 12px;border-top:0;background:#222b31;font-weight:600}
+.admin-app .table-sort-button{display:inline-flex;align-items:center;gap:6px;min-height:24px;padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;white-space:nowrap;cursor:pointer}
+.admin-app .table-sort-button svg{width:13px;height:13px}
+.admin-app .table-sort-button:hover{color:var(--teal)}
+.admin-app .table-sort-button:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:2px}
+.admin-app .admin-table td{padding:11px 12px;border-bottom:1px solid var(--line);height:49px}
+.admin-app .admin-table tbody tr:nth-child(even){background:#ffffff02}
+.admin-app .admin-table .avatar{width:29px;height:29px;border-radius:50%;font-size:10px;flex-shrink:0}
+.admin-app .admin-table .customer-cell{gap:9px}
+.admin-app .admin-table .status-badge{border-radius:20px;padding:3px 8px;font-size:10px;font-weight:500}
+.admin-app .admin-table .record-action-trigger{width:30px;height:30px;min-width:30px;border-radius:6px}
+.admin-app .table-module .table-pagination{padding:13px 16px;border-top:0;gap:12px;font-size:11px}
+.admin-app .table-module .table-page-summary{font-size:11px}
+.admin-app .table-module .table-pagination .button-row{gap:7px;align-items:center;width:auto}
+.admin-app .table-module .table-pagination button{min-height:29px;padding:5px 9px;font-size:10px}
+.admin-app .table-page-position{font-size:11px;color:var(--muted);white-space:nowrap}
+html[data-admin-theme=light] .admin-app .admin-table th{background:#f5f8fa;color:#3e5663}
+html[data-admin-theme=light] .admin-app .admin-table tbody tr:nth-child(even){background:#f8fafb}
+html[data-admin-theme=light] .admin-app .admin-table tbody tr:hover{background:#edf6f6}
+html[data-admin-theme=light] .admin-app .admin-table .status-active{color:#176745;background:#e7f5ed;border-color:#b5dfc7}
+html[data-admin-theme=light] .admin-app .admin-table .status-disabled{color:#9b3043;background:#fff0f2;border-color:#eac0c7}
+.admin-app .table-module .table-pagination,.admin-app .table-module .table-page-summary{color:var(--muted)}
+@media(max-width:767px){.admin-app .table-module>.page-heading{align-items:flex-start;padding:16px;gap:12px}.admin-app .table-module>.page-heading .heading-actions{width:100%}.admin-app .module-table-toolbar,.admin-app .table-module .local-table-filters{padding:14px;gap:10px}.admin-app .module-table-toolbar>form{width:100%;gap:10px}.admin-app .module-table-toolbar label{flex:1 1 130px}.admin-app .module-table-toolbar :is(input,select){width:100%;max-width:none;min-width:0}.admin-app .module-table-toolbar .module-rows-control{flex:0 0 90px}.admin-app .table-module>.table-scroll{margin-inline:10px}.admin-app .table-module .table-pagination nav{width:auto}.admin-app .table-module .table-page-summary{width:auto}}

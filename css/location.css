@@ -1,0 +1,58 @@
+/* Location shares the homepage's dark court palette and teal actions. */
+.locate-section {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+  background: var(--background);
+}
+.location-container { width: min(1216px, calc(100% - 48px)); margin-inline: auto; }
+.location-heading { margin-bottom: 40px; }
+.location-heading h2 { font-size: clamp(32px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -.035em; text-wrap: balance; }
+.location-heading > p { margin-top: 14px; max-width: 65ch; color: var(--muted-foreground); font-size: 16px; line-height: 1.6; }
+.location-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr); gap: 64px; align-items: center; }
+.location-details { min-width: 0; padding-block: 8px; }
+.location-venue { display: flex; align-items: center; gap: 14px; }
+.location-venue img { flex-shrink: 0; width: 56px; height: 56px; object-fit: contain; }
+.location-venue h3 { font-size: 25px; font-weight: 750; line-height: 1.25; letter-spacing: -.025em; }
+.location-address { margin-top: 22px; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.65; font-weight: 600; font-style: normal; color: var(--foreground); }
+.location-map-button { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 18px; margin-top: 26px; border-radius: 8px; background: var(--primary); color: var(--primary-foreground); font-size: 14px; font-weight: 700; transition: background-color 180ms ease-out; }
+.location-map-button:hover { background: color-mix(in srgb, var(--primary) 85%, white); }
+.location-map-button svg { width: 18px; height: 18px; flex-shrink: 0; }
+.location-map-button svg:last-child { margin-left: 16px; }
+.location-contact { display: grid; gap: 20px; border-top: 1px solid var(--border); margin-top: 30px; padding-top: 26px; }
+.location-contact-link { display: flex; align-items: center; gap: 14px; width: fit-content; min-height: 44px; max-width: 100%; }
+.location-contact-link > svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary); }
+.location-contact-link > span { min-width: 0; }
+.location-contact-link small { display: block; margin-bottom: 3px; font-size: 12px; line-height: 1.4; color: var(--muted-foreground); }
+.location-contact-link span > span { font-size: 15px; font-weight: 550; overflow-wrap: anywhere; text-underline-offset: 4px; }
+.location-contact-link:hover span > span { color: var(--primary); text-decoration: underline; }
+.location-map { margin: 0; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
+.location-map-frame { height: 390px; background: #e7ece6; }
+.location-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.location-map figcaption { min-height: 58px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 16px 20px; font-size: 12px; line-height: 1.5; }
+.location-map figcaption > span { display: inline-flex; align-items: center; gap: 8px; color: var(--muted-foreground); }
+.location-map-dot { width: 7px; height: 7px; background: var(--primary); border-radius: 50%; flex-shrink: 0; }
+.location-map figcaption a { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-weight: 600; text-underline-offset: 4px; }
+.location-map figcaption a svg { width: 14px; height: 14px; }
+.location-map figcaption a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .location-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 32px; }
+  .location-map-frame { height: 410px; }
+  .location-address { font-size: 16px; }
+}
+@media (max-width: 680px) {
+  .locate-section { padding-block: 64px; }
+  .location-container { width: calc(100% - 32px); }
+  .location-heading { margin-bottom: 32px; }
+  .location-heading > p { font-size: 15px; }
+  .location-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .location-contact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .location-contact-link { align-items: flex-start; gap: 10px; }
+  .location-contact-link > svg { margin-top: 3px; width: 18px; height: 18px; }
+  .location-contact-link span > span { font-size: 14px; }
+  .location-map-frame { height: 320px; }
+  .location-map figcaption { padding: 8px 16px; }
+  .location-map figcaption a { min-height: 44px; }
+}
+@media (max-width: 420px) {
+  .location-contact { grid-template-columns: minmax(0, 1fr); }
+}

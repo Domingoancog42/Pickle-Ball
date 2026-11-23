@@ -1,0 +1,88 @@
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+.faq-guide {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 24px;
+}
+.faq-guide > h2 {
+  grid-column: 2;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+.faq-guide > h2 span { display: block; color: var(--primary); }
+.faq-phone {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: block;
+  padding: 5px;
+  border: 3px solid #91aaa7;
+  border-radius: 38px;
+  background: #152523;
+  box-shadow: 0 20px 40px #0004;
+  color: #f0f7f5;
+  text-decoration: none;
+}
+.faq-phone-screen { overflow: hidden; border-radius: 29px; background: #071311; }
+.faq-phone-status { position: relative; display: flex; align-items: center; justify-content: space-between; height: 30px; padding-inline: 16px; font-size: 10px; font-weight: 700; }
+.faq-phone-status > svg { width: 36px; height: 14px; }
+.faq-phone-camera { position: absolute; top: 0; left: 50%; width: 78px; height: 16px; transform: translateX(-50%); border-radius: 0 0 12px 12px; background: #000; }
+.faq-phone-brand { display: flex; align-items: center; gap: 6px; padding: 8px 10px 12px; border-bottom: 1px solid #213a34; }
+.faq-phone-brand img { width: 30px; height: 30px; object-fit: contain; }
+.faq-phone-brand strong { font-size: 11px; letter-spacing: -.02em; }
+.faq-phone-brand strong span { color: var(--primary); }
+.faq-phone-brand > svg { width: 16px; height: 16px; margin-left: auto; }
+.faq-phone-content { padding: 12px; }
+.faq-phone-photo { overflow: hidden; border-radius: 10px; }
+.faq-phone-photo img { width: 100%; height: 108px; object-fit: cover; }
+.faq-phone-content h3 { margin: 14px 0 8px; font-size: 24px; font-weight: 800; line-height: 1.1; letter-spacing: -.025em; }
+.faq-phone-content > p { margin: 0; color: #b5ccc4; font-size: 11px; line-height: 1.6; }
+.faq-phone-book { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; margin-top: 16px; border-radius: 8px; background: var(--primary); color: var(--primary-foreground); font-size: 12px; font-weight: 750; }
+.faq-phone-book svg { width: 15px; height: 15px; }
+.faq-phone-progress { display: flex; gap: 6px; justify-content: space-between; margin-block: 16px; font-size: 10px; color: #b5ccc4; }
+.faq-phone-progress .is-current { color: var(--primary); font-weight: 700; }
+.faq-phone-selection { padding: 12px; border: 1px solid #29483e; border-radius: 10px; background: #10231e; }
+.faq-phone-selection > span { display: block; margin-bottom: 6px; color: #b5ccc4; font-size: 10px; }
+.faq-phone-selection strong { display: block; font-size: 12px; line-height: 1.5; }
+.faq-phone-selection p { margin-top: 4px; font-size: 10px; line-height: 1.6; color: #b5ccc4; }
+.faq-phone-bottom { display: flex; justify-content: center; padding: 8px 0 10px; }
+.faq-phone-bottom span { width: 72px; height: 3px; border-radius: 3px; background: #f0f7f5; }
+.faq-guide-steps { grid-column: 2; display: grid; align-self: stretch; align-content: space-between; gap: 24px; margin: 0; padding: 0; list-style: none; counter-reset: booking-step; }
+.faq-guide-steps li { position: relative; display: grid; grid-template-columns: 38px minmax(0, 1fr); align-items: start; gap: 12px; counter-increment: booking-step; }
+.faq-guide-steps li::before { content: counter(booking-step); position: absolute; top: -7px; left: -7px; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--primary); color: var(--primary-foreground); font-size: 10px; font-weight: 800; }
+.faq-guide-icon { display: grid; place-items: center; width: 38px; height: 42px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--primary); }
+.faq-guide-icon svg { width: 22px; height: 22px; }
+.faq-guide-steps h3 { margin: 0 0 6px; font-size: 15px; font-weight: 750; line-height: 1.4; }
+.faq-guide-steps p { margin: 0; color: var(--muted-foreground); font-size: 13px; line-height: 1.6; }
+.faq-phone:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; }
+.faq-questions { min-width: 0; padding-left: 32px; border-left: 1px solid var(--border); }
+.faq-questions > div:first-child { margin-bottom: 32px; }
+.faq-questions h2 { font-size: clamp(28px, 2.6vw, 36px); line-height: 1.2; text-wrap: balance; }
+@media (max-width: 1150px) {
+  .faq-layout { grid-template-columns: 1fr; max-width: 800px; gap: 56px; }
+  .faq-guide { grid-template-columns: 250px minmax(0, 1fr); gap: 24px 40px; }
+  .faq-questions { padding: 48px 0 0; border-left: 0; border-top: 1px solid var(--border); }
+}
+@media (max-width: 600px) {
+  .faq-layout { padding-inline: 20px; gap: 40px; }
+  .faq-guide { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: 28px; }
+  .faq-guide > h2 { grid-column: 1; text-align: center; font-size: 30px; }
+  .faq-phone { grid-column: 1; grid-row: auto; width: 230px; justify-self: center; }
+  .faq-guide-steps { grid-column: 1; max-width: 340px; justify-self: center; gap: 24px; }
+  .faq-guide-steps li { grid-template-columns: 42px minmax(0, 1fr); gap: 16px; }
+  .faq-guide-steps h3 { font-size: 16px; }
+  .faq-guide-steps p { font-size: 14px; }
+  .faq-questions { padding-top: 40px; }
+}

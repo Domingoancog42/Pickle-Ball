@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pikol Castle — signup</title>
+  </head>
+  <body>
+    <!-- Sign-up dialog. Edit its text and fields here; shared styling is in css/auth.css. -->
+    <template id="template-signup">
+      <div
+        class="auth-dialog auth-signup"
+        role="dialog"
+        aria-labelledby="signup-title"
+        aria-describedby="signup-description"
+        data-slot="dialog-content"
+        tabindex="-1"
+      >
+        <div class="auth-banner">
+          <div class="court-pattern auth-banner-pattern" aria-hidden="true"></div>
+          <button class="auth-close" type="button" data-action="close" aria-label="Close">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="m18 6-12 12M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="auth-brand">
+          <img src="assets/images/logo.png" alt="Pikol Castle logo" width="72" height="72" />
+        </div>
+
+        <div class="auth-body">
+          <div class="auth-heading">
+            <h2 id="signup-title" data-slot="dialog-title">Join the castle</h2>
+            <p id="signup-description">Create a free account and claim your court anytime.</p>
+          </div>
+
+          <form class="auth-form" data-auth="signup">
+            <div class="auth-field">
+              <label for="signup-name">Full name</label>
+              <div class="auth-control">
+                <svg
+                  class="auth-field-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <input
+                  id="signup-name"
+                  name="name"
+                  type="text"
+                  placeholder="Juan Dela Cruz"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="auth-field">
+              <label for="signup-email">Email</label>
+              <div class="auth-control">
+                <svg
+                  class="auth-field-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-9 6a2 2 0 0 1-2 0L2 7" />
+                </svg>
+                <input
+                  id="signup-email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <p class="auth-temp-note">We will email a temporary password. Use it to log in and choose your own password before opening your dashboard.</p>
+
+            <button class="auth-submit" type="submit" data-slot="button">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M20 8v6M23 11h-6" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
+              Create Free Account
+            </button>
+          </form>
+
+          <p class="auth-switch">
+            Already have an account?
+            <button class="auth-link" type="button" data-action="auth-view" data-view="login">Log In</button>
+          </p>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

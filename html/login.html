@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pikol Castle — login</title>
+  </head>
+  <body>
+    <!-- Login dialog. Edit its text and fields here; shared styling is in css/auth.css. -->
+    <template id="template-login">
+      <div
+        class="auth-dialog auth-login"
+        role="dialog"
+        aria-labelledby="login-title"
+        aria-describedby="login-description"
+        data-slot="dialog-content"
+        tabindex="-1"
+      >
+        <div class="auth-banner">
+          <img class="auth-player-art" src="assets/images/login-pickleball.png" alt="" width="800" height="1024" />
+          <div class="auth-court-caption"><p>Your next game<br>starts here.</p><span>Pikol Castle · Laguindingan</span></div>
+
+        </div>
+
+          <button class="auth-close" type="button" data-action="close" aria-label="Close">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="m18 6-12 12M6 6l12 12" />
+            </svg>
+          </button>
+
+        <div class="auth-brand">
+          <img src="assets/images/logo.png" alt="Pikol Castle logo" width="72" height="72" />
+        </div>
+
+        <div class="auth-body">
+          <div class="auth-heading">
+            <h2 id="login-title" data-slot="dialog-title">Welcome back</h2>
+            <p id="login-description">Log in to book courts in seconds and track your games.</p>
+          </div>
+
+          <form class="auth-form" data-auth="login">
+            <div class="auth-field">
+              <label for="login-email">Email address</label>
+              <div class="auth-control">
+                <svg
+                  class="auth-field-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-9 6a2 2 0 0 1-2 0L2 7" />
+                </svg>
+                <input
+                  id="login-email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  autocapitalize="none"
+                  spellcheck="false"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="auth-field">
+              <div class="auth-label-row">
+                <label for="login-password">Password</label>
+                <button class="auth-link auth-forgot" type="button" data-action="auth-view" data-view="forgot">
+                  Forgot password?
+                </button>
+              </div>
+              <div class="auth-control auth-password">
+                <svg
+                  class="auth-field-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <input
+                  id="login-password"
+                  name="password"
+                  type="password"
+                  placeholder="••••••••"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  class="auth-password-toggle"
+                  type="button"
+                  data-action="password"
+                  aria-label="Show password"
+                  aria-controls="login-password"
+                  aria-pressed="false"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <label class="auth-remember" for="login-remember">
+              <input id="login-remember" name="remember" type="checkbox" checked />
+              <span>Remember me for 30 days</span>
+            </label>
+
+            <div class="auth-turnstile">
+              <div data-turnstile-widget aria-label="Cloudflare security check"></div>
+              <p id="login-security-status" class="auth-turnstile-status" data-turnstile-status role="status" aria-live="polite">Loading security check...</p>
+              <button class="auth-link auth-turnstile-retry" type="button" data-turnstile-retry hidden>Try security check again</button>
+            </div>
+
+            <button class="auth-submit" type="submit" data-slot="button" aria-describedby="login-security-status" disabled>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m10 17 5-5-5-5M15 12H3M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              </svg>
+              Log In
+            </button>
+          </form>
+
+          <p class="auth-switch">
+            Don't have an account?
+            <button class="auth-link" type="button" data-action="auth-view" data-view="signup">Sign Up</button>
+          </p>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Require all denied
+<Files "anime.umd.min.js">
+Require all granted
+</Files>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pikol Castle</title>
+  </head>
+  <body>
+    <section id="rates" aria-label="Rates" class="py-20 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-primary font-bold tracking-widest uppercase text-sm mb-3">Court Rates</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Honest Rates, No Hidden Fees</h2>
+          <p class="mt-4 text-muted-foreground">
+            Pay only for time on court. Paddles and balls available at the front desk — first rental is on the house.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2" data-rate-grid>
+          <div>
+            <div
+              data-slot="card"
+              class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative h-full overflow-hidden border-border/70 bg-card"
+            >
+              <div data-slot="card-content" class="p-6 sm:p-7">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center mb-5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-sun w-6 h-6 text-primary"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold" data-rate-name>Court rate</h3>
+                <p class="text-sm text-muted-foreground mt-0.5" data-rate-type>Hourly court hire</p>
+                <div class="mt-4 flex items-baseline gap-1">
+                  <span class="text-4xl font-extrabold text-primary" data-rate-price>—</span
+                  ><span class="text-sm text-muted-foreground">/hour</span>
+                </div>
+                <ul class="mt-6 space-y-2.5">
+                  <li class="flex items-start gap-2 text-sm text-foreground/85">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>1-hour court bookings
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-foreground/85">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>Choose from available court times
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-foreground/85">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>Staff confirmation required
+                  </li>
+                </ul>
+                <button
+                  class="mt-7 w-full min-h-[44px] rounded-lg font-semibold text-sm transition-all border border-primary/40 text-primary hover:bg-primary/10"
+                  type="button"
+                  data-action="book"
+                >
+                  Book at this rate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+/* Keep archive controls compact after table filters acquire labels. */
+.admin-app .archive-filters input,
+.admin-app .archive-filters select { flex: none; max-width: 100%; width: 100%; }
+@media (max-width: 767px) {
+  .admin-app .header-left:has([data-page^="archived-"]) { min-width: 0; flex: 1; }
+  .admin-app .breadcrumb:has([data-page^="archived-"]) { min-width: 0; }
+  .admin-app .archive-filters .module-filter-field { flex: 1 1 100%; }
+  .admin-app .archive-table th:last-child,
+  .admin-app .archive-table td:last-child {
+    position: sticky;
+    right: 0;
+    background: var(--panel);
+    border-left: 1px solid var(--line);
+  }
+}
